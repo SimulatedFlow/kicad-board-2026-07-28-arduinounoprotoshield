@@ -1,0 +1,9 @@
+{
+  "board_name": "ArduinoUnoProtoShield",
+  "one_liner": "Ein stabiles Prototyping-Shield für den Arduino Uno R3 mit großzügiger THT-Rasterfläche, dedizierten I2C- und SPI-Sensor-Schnittstellen, Status-LEDs, Reset-Taster und integriertem Signalgeber.",
+  "market_gap": "Gängige Prototyping-Boards haben oft unübersichtliche Pins oder zu kleine Rasterflächen. Dieses Shield bietet beschriftete Rand-Schnittstellen für Displays und Sensoren (I2C/SPI) sowie eine klar strukturierte THT-Lötmatrix, um fliegende Wackelkontakte beim Basteln zu verhindern.",
+  "confidence": "high",
+  "price_eur": 9,
+  "target_enclosure": "Direktmontage als Shield auf Arduino Uno R3 / Standard-Gehäuse für Arduino Uno",
+  "injection_notes": "keine"
+}

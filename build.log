@@ -1,0 +1,6 @@
+[02:04:13] === Board-Bau gestartet: ArduinoUnoProtoShield ===
+[02:04:16] Claude-MCP-Bau laeuft …
+[02:26:16] Bau fertig.
+[02:26:16] Plane-Stitch: +0 GND-Vias, +0 Power-Vias gesetzt (uebersprungen: 22 PTH, 0 bereits angebunden).
+[02:26:16] DRC-Gate: pruefe + behebe DRC-Fehler (routing-erhaltend) …
+[02:26:19] DRC-Gate: 1 Fehler -> routing-erhaltender Auto-Fix (Runde 1/2)

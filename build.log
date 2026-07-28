@@ -4,3 +4,7 @@
 [02:26:16] Plane-Stitch: +0 GND-Vias, +0 Power-Vias gesetzt (uebersprungen: 22 PTH, 0 bereits angebunden).
 [02:26:16] DRC-Gate: pruefe + behebe DRC-Fehler (routing-erhaltend) …
 [02:26:19] DRC-Gate: 1 Fehler -> routing-erhaltender Auto-Fix (Runde 1/2)
+[02:29:40] DRC-Gate: 1 Fehler -> routing-erhaltender Auto-Fix (Runde 2/2)
+[02:33:26] DRC-Gate Ende: 1 Fehler nach 2 Fix-Runde(n)
+[02:33:26] DRC-GATE NICHT bestanden (drc_left=1) → KEIN Fertigungspaket, kein BUILT-Marker. Board muss erst DRC-sauber sein.
+[02:33:29] === Board-Bau abgeschlossen ===

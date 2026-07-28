@@ -1,0 +1,11 @@
+Fertig. Zusammenfassung:
+
+1. **Board geöffnet:** `ArduinoUnoProtoShield.kicad_pcb` (68,6×53,3, 4-Lagen, all-THT Arduino-Uno-Shield).
+2. **Start-Fehlerzahl (severity error): 0.** `run_drc` meldete 53 Verstöße — ausnahmslos kosmetische Warnungen (2 silk_edge, 33 silk_overlap, 10 silk_over_copper, 4 lib_footprint_mismatch, 4 MountingHole-lib-nag). Keine clearance-, unconnected- oder courtyard-Fehler.
+3. **Connectivity unabhängig geprüft** (SWIG-DRC verschweigt `unconnected_items`): alle 13 zu routenden Signalnetze (RESET, +3V3, A4, A5, D6, D9, D10–D13, LED1_A, LED2_A, BZ_SIG) sind vollständig verlegt; die ~15 Einzel-Pad-Breakout-Netze haben nichts zu verbinden; GND/+5V laufen über die Innen-Planes (THT self-connect). → 0 unconnected.
+4. **check_courtyard_overlaps** zeigte nur bekannte Falsch-Positive: BZ1/CN_DIG_L/CN_PWR↔MHx sind MountingHole-Ref-Text-Bbox-Artefakte, die 4 J_PROTO-Paare 0,03-mm-Ref-Text-Splitter (die Proto-Courtyards wurden bereits auf ±1,24 geschrumpft → 4 lib_footprint_mismatch). Echte DRC: 0 courtyard-Fehler.
+5. **Geänderte Bauteile/Tracks: KEINE.** Das Board erfüllt die „so weit wie möglich erhalten"-Vorgabe bereits — es hat keine severity-error-Verstöße. Erfundene Verschiebungen/Reroutes hätten nur Schaden riskiert, deshalb bewusst nichts angefasst.
+6. **End-DRC-Fehlerzahl: 0** (nach dem Speichern erneut bestätigt: 0 errors / 53 Warnungen).
+7. **.kicad_pcb gespeichert: JA** (`save_project force=true`, erfolgreich auf Platte).
+
+Hinweis: Die Aufgaben-Prämisse „hat DRC-Fehler" trifft auf dieses Board nicht (mehr) zu — es ist die bereits fertiggestellte Version und war schon fehlerfrei. Gerber/PDF/Render habe ich wie gefordert nicht exportiert.

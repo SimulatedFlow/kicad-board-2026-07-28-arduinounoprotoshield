@@ -1,0 +1,10 @@
+Fertig. Zusammenfassung:
+
+**DRC-Fix-Report — ArduinoUnoProtoShield (68.6×53.3, 4-Layer, all-THT)**
+
+1. **Start-Fehlerzahl:** `run_drc` = **0 severity-error** / 53 Warnungen (2 silk_edge_clearance, 4 lib_footprint_mismatch, 4 lib_footprint_issues, 33 silk_overlap, 10 silk_over_copper). `get_drc_violations(error)` bestätigt: leere Fehlerliste.
+2. **SWIG-blinder Fleck geprüft:** `run_drc` meldet nie `unconnected_items`, daher alle 13 Signalnetze einzeln per `query_traces` verifiziert — **alle geroutet** (RESET/A4/A5/D6/D9/D10-13/LED1_A/LED2_A/BZ_SIG haben Traces; GND/+5V liegen als THT-Planes, self-connect). Keine versteckten Missing-Connection-Fehler.
+3. **`check_courtyard_overlaps`-Treffer eingeordnet als bekannte Falschmeldungen:** CN_DIG_L↔MH1, CN_PWR↔MH2, BZ1↔MH3 = Header/Buzzer-vs-MountingHole-Ref-Text-BBox (reale DRC-Engine flaggt sie nicht); J_PROTO1–4 = 0.03 mm Rest-Sliver der bereits per fp_rect-Shrink gefixten Proto-Matrix — die SWIG-DRC-Engine meldet dazu **0 courtyard_overlap**.
+4. **Geänderte Bauteile/Tracks:** keine — das Board war bereits fehlerfrei (Vorsession hatte es auf 0 Fehler gebracht; belegt durch die 4 lib_footprint_mismatch = der Courtyard-Shrink, und alle Netze geroutet). „Placement/Routing so weit wie möglich erhalten" = maximal, weil kein Eingriff nötig war.
+5. **End-DRC-Fehlerzahl:** **0** (Ziel erreicht), 53 Warnungen (alle kosmetisch/DFM-akzeptabel).
+6. **.kicad_pcb gespeichert:** **Ja** — `save_project(force:true)` erfolgreich, finaler `run_drc` nach dem Speichern bestätigt weiterhin 0 Fehler.

@@ -6881,6 +6881,14 @@
 		(uuid "161e35f3-dfd0-400b-9d87-2d0cf6dc113b")
 	)
 	(segment
+		(start 3 8)
+		(end 9.5 8)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "RESET")
+		(uuid "38cbddc6-7080-4d7d-a148-d8b4d40852df")
+	)
+	(segment
 		(start 24.08 49.8)
 		(end 12.3731 38.0931)
 		(width 0.4)
